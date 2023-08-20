@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>编排示例 on FastGPT</title>
+    <link>/docs/workflow/examples/</link>
+    <description>Recent content in 编排示例 on FastGPT</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language><atom:link href="/docs/workflow/examples/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>联网 GPT</title>
+      <link>/docs/workflow/examples/google_search/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/workflow/examples/google_search/</guid>
+      <description>如上图，利用 HTTP 模块，你可以轻松的外接一个搜索引擎。这里以调用 Google Search API 为例。
+注册 Google Search API link参考这篇文章
+写一个 Google Search 接口 link这里用 Laf 快速实现一个接口，即写即发布，无需部署。务必打开 POST 请求方式。
+import cloud from &amp;#39;@lafjs/cloud&amp;#39;; const googleSearchKey = &amp;#39;&amp;#39;; const googleCxId = &amp;#39;&amp;#39;; const baseurl = &amp;#39;https://www.googleapis.com/customsearch/v1&amp;#39;; export default async function (ctx: FunctionContext) { const { searchKey } = ctx.body; if (!searchKey) { return { prompt: &amp;#39;&amp;#39; }; } try { const { data } = await cloud.fetch.get(baseurl, { params: { q: searchKey, cx: googleCxId, key: googleSearchKey, c2coff: 1, start: 1, end: 5, dateRestrict: &amp;#39;m[1]&amp;#39; } }); const result = data.</description>
+    </item>
+    
+  </channel>
+</rss>

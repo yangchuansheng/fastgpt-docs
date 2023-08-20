@@ -1,0 +1,1 @@
+function toggleMenu(){document.getElementById("isToggle").classList.toggle("open");var e=document.getElementById("navigation");e.style.display==="block"?e.style.display="none":e.style.display="block"}
