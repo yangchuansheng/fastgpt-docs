@@ -15,7 +15,7 @@ FastGPT 在线体验：[https://fastgpt.run](https://fastgpt.run)
 
 |                            |                            |
 | -------------------------- | -------------------------- |
-| ![Demo](imgs/intro1.png) | ![Demo](https://cdn.jsdelivr.us/gh/yangchuansheng/fastgpt-docs@main/assets/imgs/intro2.png) |
+| ![Demo](https://cdn.jsdelivr.us/gh/yangchuansheng/fastgpt-docs@main/assets/imgs/intro1.png) | ![Demo](https://cdn.jsdelivr.us/gh/yangchuansheng/fastgpt-docs@main/assets/imgs/intro2.png) |
 | ![Demo](https://cdn.jsdelivr.us/gh/yangchuansheng/fastgpt-docs@main/assets/imgs/intro3.png) | ![Demo](https://cdn.jsdelivr.us/gh/yangchuansheng/fastgpt-docs@main/assets/imgs/intro4.png) |
 
 ## FastGPT 能力
