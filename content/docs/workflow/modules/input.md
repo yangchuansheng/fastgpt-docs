@@ -14,4 +14,4 @@ weight: 430
 - 流程入口
 - 自动执行
 
-![](/imgs/chatinput.png)
+![](https://cdn.jsdelivr.us/gh/yangchuansheng/fastgpt-docs@main/assets/imgs/chatinput.png)

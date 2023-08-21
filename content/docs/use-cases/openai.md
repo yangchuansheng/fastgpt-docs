@@ -15,7 +15,7 @@ weight: 620
 密钥需要自己保管好，一旦关闭就无法再复制密钥，只能创建新密钥再复制。
 {{% /alert %}}
 
-![](/imgs/fastgpt-api.png)
+![](https://cdn.jsdelivr.us/gh/yangchuansheng/fastgpt-docs@main/assets/imgs/fastgpt-api.png)
 
 ## 组合秘钥
 
@@ -30,8 +30,8 @@ OPENAI_API_KEY = 组合秘钥
 
 **[ChatGPT Next Web](https://github.com/Yidadaa/ChatGPT-Next-Web) 示例：**
 
-![](/imgs/chatgptnext.png)
+![](https://cdn.jsdelivr.us/gh/yangchuansheng/fastgpt-docs@main/assets/imgs/chatgptnext.png)
 
 **[ChatGPT Web](https://github.com/Chanzhaoyu/chatgpt-web) 示例：**
 
-![](/imgs/chatgptweb.png)
+![](https://cdn.jsdelivr.us/gh/yangchuansheng/fastgpt-docs@main/assets/imgs/chatgptweb.png)

@@ -15,14 +15,14 @@ weight: 741
 
 打开 「应用管理」，点击「新建应用」：
 
-![](/imgs/sealos3.png)  
-![](/imgs/sealos4.png)
+![](https://cdn.jsdelivr.us/gh/yangchuansheng/fastgpt-docs@main/assets/imgs/sealos3.png)  
+![](https://cdn.jsdelivr.us/gh/yangchuansheng/fastgpt-docs@main/assets/imgs/sealos4.png)
 
 ### 填写基本配置
 
 务必开启外网访问，复制外网访问提供的地址。
 
-![](/imgs/sealos5.png)
+![](https://cdn.jsdelivr.us/gh/yangchuansheng/fastgpt-docs@main/assets/imgs/sealos5.png)
 
 ### 添加配置文件
 
@@ -82,7 +82,7 @@ weight: 741
 5. 文件值为刚刚复制的那段代码。
 6. 点击确认。
 
-   ![](/imgs/sealos6.png)
+   ![](https://cdn.jsdelivr.us/gh/yangchuansheng/fastgpt-docs@main/assets/imgs/sealos6.png)
 
 ### 部署应用
 
@@ -94,7 +94,7 @@ weight: 741
 
    > 注意：这是个 API 地址，点击打开是无效的。如需验证，可以访问: `*.cloud.sealos.io/openai/api`，如果提示 `Invalid URL (GET /api)` 则代表成功。
    
-   ![](/imgs/sealos7.png)
+   ![](https://cdn.jsdelivr.us/gh/yangchuansheng/fastgpt-docs@main/assets/imgs/sealos7.png)
 
 2. 修改环境变量（是 FastGPT 的环境变量，不是 Sealos 的）：
 

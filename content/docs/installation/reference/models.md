@@ -13,7 +13,7 @@ weight: 752
 
 首先你需要部署一个 [one-api](/docs/installation/one-api/)，并添加对应的【渠道】
 
-![](/imgs/chatmodels1.png)
+![](https://cdn.jsdelivr.us/gh/yangchuansheng/fastgpt-docs@main/assets/imgs/chatmodels1.png)
 
 ## 添加 FastGPT 配置
 

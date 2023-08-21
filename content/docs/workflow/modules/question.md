@@ -15,7 +15,7 @@ weight: 425
 - 触发执行
 - function_call 模块
 
-![](/imgs/cq1.png)
+![](https://cdn.jsdelivr.us/gh/yangchuansheng/fastgpt-docs@main/assets/imgs/cq1.png)
 
 ## 功能
 

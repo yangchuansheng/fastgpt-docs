@@ -13,7 +13,7 @@ weight: 421
 
 | 图 1                         | 图 2                         |
 | ---------------------------- | ---------------------------- |
-| ![](/imgs/trigger1.png) | ![](/imgs/trigger2.png) |
+| ![](https://cdn.jsdelivr.us/gh/yangchuansheng/fastgpt-docs@main/assets/imgs/trigger1.png) | ![](https://cdn.jsdelivr.us/gh/yangchuansheng/fastgpt-docs@main/assets/imgs/trigger2.png) |
 
 【知识库搜索】模块中，由于**引用内容**始终会有输出，会导致【AI 对话】模块的**引用内容**输入无论有没有搜到内容都会被赋值。如果此时不连接触发器（图 2），在搜索结束后必定会执行【AI 对话】模块。
 

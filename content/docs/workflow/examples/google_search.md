@@ -7,9 +7,9 @@ toc: true
 weight: 441
 ---
 
-![](/imgs/google_search_1.png)
+![](https://cdn.jsdelivr.us/gh/yangchuansheng/fastgpt-docs@main/assets/imgs/google_search_1.png)
 
-![](/imgs/google_search_2.png)
+![](https://cdn.jsdelivr.us/gh/yangchuansheng/fastgpt-docs@main/assets/imgs/google_search_2.png)
 
 如上图，利用 HTTP 模块，你可以轻松的外接一个搜索引擎。这里以调用 Google Search API 为例。
 

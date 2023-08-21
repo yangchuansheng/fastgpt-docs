@@ -52,7 +52,7 @@ ChatGLM2-6B 是开源中英双语对话模型 ChatGLM-6B 的第二代版本，�
 
 启动成功后应该会显示如下地址：
 
-![](/imgs/chatglm2.png)
+![](https://cdn.jsdelivr.us/gh/yangchuansheng/fastgpt-docs@main/assets/imgs/chatglm2.png)
 
 > 这里的 `http://0.0.0.0:6006` 就是连接地址。
 

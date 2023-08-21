@@ -20,13 +20,13 @@ weight: 429
 2. 一种是不写回复内容，直接由外部输入触发，并回复输入的内容。
 
 {{< figure
-    src="/imgs/specialreply.png"
+    src="https://cdn.jsdelivr.us/gh/yangchuansheng/fastgpt-docs@main/assets/imgs/specialreply.png"
     alt=""
     caption="图 1"
     >}}
 
 {{< figure
-    src="/imgs/specialreply2.png"
+    src="https://cdn.jsdelivr.us/gh/yangchuansheng/fastgpt-docs@main/assets/imgs/specialreply2.png"
     alt=""
     caption="图 2"
     >}}

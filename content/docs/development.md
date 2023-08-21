@@ -81,4 +81,4 @@ docker build -t dockername/fastgpt .
 
 遇到困难了吗？有任何问题吗? 加入微信群与开发者和用户保持沟通。
 
-<center><image width="400px" src="/imgs/wechat-fastgpt.webp" /></center>
+<center><image width="400px" src="https://cdn.jsdelivr.us/gh/yangchuansheng/fastgpt-docs@main/assets/imgs/wechat-fastgpt.webp" /></center>

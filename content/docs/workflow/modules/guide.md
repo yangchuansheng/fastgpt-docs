@@ -15,4 +15,4 @@ weight: 426
 
 如图，可以在用户提问前给予一定引导。并可以设置引导问题。
 
-![](/imgs/guide.png)
+![](https://cdn.jsdelivr.us/gh/yangchuansheng/fastgpt-docs@main/assets/imgs/guide.png)

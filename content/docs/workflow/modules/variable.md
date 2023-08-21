@@ -22,11 +22,11 @@ weight: 422
 
 用户在对话前会被要求先填写目标语言，配合用户引导，我们就构建了一个简单的翻译机器人。**目标语言**的 `key：language` 被写入到【AI 对话】模块的限定词里。
 
-![](/imgs/variable.png)
+![](https://cdn.jsdelivr.us/gh/yangchuansheng/fastgpt-docs@main/assets/imgs/variable.png)
 
 通过完整对话记录我们可以看到，实际的限定词从：“将我的问题直接翻译成{{language}}” 变成了 “将我的问题直接翻译成英语”，因为 {{language}} 被变量替换了。
 
-![](/imgs/variable2.png)
+![](https://cdn.jsdelivr.us/gh/yangchuansheng/fastgpt-docs@main/assets/imgs/variable2.png)
 
 ## 系统级变量
 

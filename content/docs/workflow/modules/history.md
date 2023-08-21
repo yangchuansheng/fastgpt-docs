@@ -16,4 +16,4 @@ weight: 427
 
 每次对话时，会从数据库取最多 n 条聊天记录作为上下文。注意，不是指本轮对话最多 n 条上下文，本轮对话还包括：提示词、限定词、引用内容和问题。
 
-![](/imgs/history.png)
+![](https://cdn.jsdelivr.us/gh/yangchuansheng/fastgpt-docs@main/assets/imgs/history.png)

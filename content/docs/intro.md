@@ -15,8 +15,8 @@ FastGPT 在线体验：[https://fastgpt.run](https://fastgpt.run)
 
 |                            |                            |
 | -------------------------- | -------------------------- |
-| ![Demo](imgs/intro1.png) | ![Demo](/imgs/intro2.png) |
-| ![Demo](/imgs/intro3.png) | ![Demo](/imgs/intro4.png) |
+| ![Demo](imgs/intro1.png) | ![Demo](https://cdn.jsdelivr.us/gh/yangchuansheng/fastgpt-docs@main/assets/imgs/intro2.png) |
+| ![Demo](https://cdn.jsdelivr.us/gh/yangchuansheng/fastgpt-docs@main/assets/imgs/intro3.png) | ![Demo](https://cdn.jsdelivr.us/gh/yangchuansheng/fastgpt-docs@main/assets/imgs/intro4.png) |
 
 ## FastGPT 能力
 
@@ -24,31 +24,31 @@ FastGPT 在线体验：[https://fastgpt.run](https://fastgpt.run)
 
 通过导入文档或已有问答对进行训练，让 AI 模型能根据你的文档以交互式对话方式回答问题。
 
-![](/imgs/ability1.png)
+![](https://cdn.jsdelivr.us/gh/yangchuansheng/fastgpt-docs@main/assets/imgs/ability1.png)
 
 ### 2. 简单易用的可视化界面
 
 FastGPT 采用直观的可视化界面设计，为各种应用场景提供了丰富实用的功能。通过简洁易懂的操作步骤，可以轻松完成 AI 客服的创建和训练流程。
 
-![](/imgs/ability5.png)
+![](https://cdn.jsdelivr.us/gh/yangchuansheng/fastgpt-docs@main/assets/imgs/ability5.png)
 
 ### 3. 自动数据预处理
 
 提供手动输入、直接分段、LLM 自动处理和 CSV 等多种数据导入途径，其中“直接分段”支持通过 PDF、WORD、Markdown 和 CSV 文档内容作为上下文。FastGPT 会自动对文本数据进行预处理、向量化和 QA 分割，节省手动训练时间，提升效能。
 
-![](/imgs/ability2.png)
+![](https://cdn.jsdelivr.us/gh/yangchuansheng/fastgpt-docs@main/assets/imgs/ability2.png)
 
 ### 4. 工作流编排
 
 基于 Flow 模块的工作流编排，可以帮助你设计更加复杂的问答流程。例如查询数据库、查询库存、预约实验室等。
 
-![](/imgs/ability3.png)
+![](https://cdn.jsdelivr.us/gh/yangchuansheng/fastgpt-docs@main/assets/imgs/ability3.png)
 
 ### 5. 强大的 API 集成
 
 FastGPT 对外的 API 接口对齐了 OpenAI 官方接口，可以直接接入现有的 GPT 应用，也可以轻松集成到企业微信、公众号、飞书等平台。
 
-![aaa](/imgs/ability4.png)
+![aaa](https://cdn.jsdelivr.us/gh/yangchuansheng/fastgpt-docs@main/assets/imgs/ability4.png)
 
 ## FastGPT 特点
 
@@ -78,4 +78,4 @@ FastGPT 对外的 API 接口对齐了 OpenAI 官方接口，可以直接接入�
 
 ## 知识库核心流程图
 
-![aaa](/imgs/KBProcess.jpg)
+![aaa](https://cdn.jsdelivr.us/gh/yangchuansheng/fastgpt-docs@main/assets/imgs/KBProcess.jpg)

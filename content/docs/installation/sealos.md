@@ -13,11 +13,11 @@ Sealos 的服务器在国外，不需要额外处理网络问题，无需服务�
 
 由于需要部署数据库，部署完后需要等待 2~4 分钟才能正常访问。默认用了最低配置，首次访问时会有些慢。
 
-![](/imgs/sealos1.png)
+![](https://cdn.jsdelivr.us/gh/yangchuansheng/fastgpt-docs@main/assets/imgs/sealos1.png)
 
 点击 Sealos 提供的外网地址即可打开 FastGPT 的可视化界面。
 
-![](/imgs/sealos2.png)
+![](https://cdn.jsdelivr.us/gh/yangchuansheng/fastgpt-docs@main/assets/imgs/sealos2.png)
 
 > 用户名：`root`
 > 

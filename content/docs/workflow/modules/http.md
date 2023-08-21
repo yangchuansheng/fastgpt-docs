@@ -15,7 +15,7 @@ weight: 428
 - 触发执行
 - 核中核模块
 
-![](/imgs/http1.png)
+![](https://cdn.jsdelivr.us/gh/yangchuansheng/fastgpt-docs@main/assets/imgs/http1.png)
 
 ## 介绍
 

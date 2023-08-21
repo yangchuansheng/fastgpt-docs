@@ -16,7 +16,7 @@ weight: 424
 - function_call 模块
 - 核心模块
 
-![](/imgs/extract1.png)
+![](https://cdn.jsdelivr.us/gh/yangchuansheng/fastgpt-docs@main/assets/imgs/extract1.png)
 
 ## 功能
 

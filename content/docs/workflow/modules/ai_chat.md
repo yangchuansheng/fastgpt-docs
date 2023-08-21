@@ -15,7 +15,7 @@ weight: 423
 - 触发执行
 - 核心模块
 
-![](/imgs/aichat.png)
+![](https://cdn.jsdelivr.us/gh/yangchuansheng/fastgpt-docs@main/assets/imgs/aichat.png)
 
 ## 参数说明
 

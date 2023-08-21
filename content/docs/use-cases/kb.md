@@ -13,7 +13,7 @@ weight: 640
 
 3 月时候，在 Twitter 上刷到一个老哥使用 GPT 训练自己的博客记录，并且成本非常低（比起 FT）。他给出了一个完整的流程图：
 
-![向量搜索 GPT 流程图](/imgs/1.png)
+![向量搜索 GPT 流程图](https://cdn.jsdelivr.us/gh/yangchuansheng/fastgpt-docs@main/assets/imgs/1.png)
 
 看到这个推文后，我灵机一动，应用场景就十分清晰了。直接上手开干，在经过不到 1 个月时间，FastGPT 在原来多助手管理基础上，加入了向量搜索。于是便有了最早的一期视频：
 
@@ -31,7 +31,7 @@ weight: 640
 
 结合上述 3 个概念，便有了 “向量搜索 + 大模型 = 知识库问答” 的公式。下图是 FastGPT V3 中知识库问答功能的完整逻辑：
 
-![向量搜索 GPT 流程图](/imgs/2.png)
+![向量搜索 GPT 流程图](https://cdn.jsdelivr.us/gh/yangchuansheng/fastgpt-docs@main/assets/imgs/2.png)
 
 与大部分其他知识库问答产品不一样的是， FastGPT 采用了 QA 问答对进行存储，而不是仅进行 chunk（文本分块）处理。目的是为了减少向量化内容的长度，让向量能更好的表达文本的含义，从而提高搜索精准度。
 此外 FastGPT 还提供了搜索测试和对话测试两种途径对数据进行调整，从而方便用户调整自己的数据。根据上述流程和方式，我们以构建一个 FastGPT 常见问题机器人为例，展示如何构建一个高质量的 AI 知识库。
@@ -40,15 +40,15 @@ weight: 640
 
 首先，先创建一个 FastGPT 常见问题知识库
 
-![创建知识库应用](/imgs/3.png)
+![创建知识库应用](https://cdn.jsdelivr.us/gh/yangchuansheng/fastgpt-docs@main/assets/imgs/3.png)
 
 ### 通过 QA 拆分，获取基础知识
 
 我们先直接把 FastGPT Git 上一些已有文档，进行 QA 拆分，从而获取一些 FastGPT 基础的知识。下面是 README 例子。
 
-![QA 拆分示意图](/imgs/4.png)
+![QA 拆分示意图](https://cdn.jsdelivr.us/gh/yangchuansheng/fastgpt-docs@main/assets/imgs/4.png)
 
-![](/imgs/5.png)
+![](https://cdn.jsdelivr.us/gh/yangchuansheng/fastgpt-docs@main/assets/imgs/5.png)
 
 ### 修正 QA
 
@@ -56,13 +56,13 @@ weight: 640
 
 此外，我们观察到第一列第三个知识点。这个知识点是介绍了 FastGPT 一些资源链接，但是 QA 拆分将答案放置在了 A 中，但通常来说用户的提问并不会直接问“有哪些链接”，通常会问：“部署教程”，“问题文档”之类的。因此，我们需要将这个知识点进行简单的一个处理，如下图：
 
-![手动修改知识库数据](/imgs/6.png)
+![手动修改知识库数据](https://cdn.jsdelivr.us/gh/yangchuansheng/fastgpt-docs@main/assets/imgs/6.png)
 
 我们先来创建一个应用，看看效果如何。 首先需要去创建一个应用，并且在知识库中关联相关的知识库。另外还需要在配置页的提示词中，告诉 GPT：“知识库的范围”。
 
-![](/imgs/7.png)
+![](https://cdn.jsdelivr.us/gh/yangchuansheng/fastgpt-docs@main/assets/imgs/7.png)
 
-![README QA 拆分后效果](/imgs/8.png)
+![README QA 拆分后效果](https://cdn.jsdelivr.us/gh/yangchuansheng/fastgpt-docs@main/assets/imgs/8.png)
 
 整体的效果还是不错的，链接和对应的图片都可以顺利的展示。
 
@@ -70,7 +70,7 @@ weight: 640
 
 接着，我们再把 FastGPT 常见问题的文档导入，由于平时整理不当，我们只能手动的录入对应的问答。
 
-![手动录入知识库结果](/imgs/9.png)
+![手动录入知识库结果](https://cdn.jsdelivr.us/gh/yangchuansheng/fastgpt-docs@main/assets/imgs/9.png)
 
 导入结果如上图。可以看到，我们均采用的是问答对的格式，而不是粗略的直接导入。目的就是为了模拟用户问题，进一步的提高向量搜索的匹配效果。可以为同一个问题设置多种问法，效果更佳。
 FastGPT 还提供了 openapi 功能，你可以在本地对特殊格式的文件进行处理后，再上传到 FastGPT，具体可以参考：[FastGPT Api Docs](https://kjqvjse66l.feishu.cn/docx/DmLedTWtUoNGX8xui9ocdUEjnNh)
@@ -81,13 +81,13 @@ FastGPT 提供了搜索测试和对话测试两种途径对知识库进行微调
 
 ### 搜索测试
 
-![搜索测试作用](/imgs/10.png)
+![搜索测试作用](https://cdn.jsdelivr.us/gh/yangchuansheng/fastgpt-docs@main/assets/imgs/10.png)
 
 你可能会遇到下面这种情况，由于“知识库”这个关键词导致一些无关内容的相似度也被搜索进去，此时就需要给第四条记录也增加一个“知识库”关键词，从而去提高它的相似度。
 
-![搜索测试结果](/imgs/11.png)
+![搜索测试结果](https://cdn.jsdelivr.us/gh/yangchuansheng/fastgpt-docs@main/assets/imgs/11.png)
 
-![优化后的搜索测试结果](/imgs/12.png)
+![优化后的搜索测试结果](https://cdn.jsdelivr.us/gh/yangchuansheng/fastgpt-docs@main/assets/imgs/12.png)
 
 ### 提示词设置
 
@@ -96,15 +96,15 @@ FastGPT 提供了搜索测试和对话测试两种途径对知识库进行微调
 1. 告诉 Gpt 回答什么方面内容。
 2. 给知识库一个基本描述，从而让 Gpt 更好的判断用户的问题是否属于知识库范围。
 
-![提示词设置](/imgs/13.png)
+![提示词设置](https://cdn.jsdelivr.us/gh/yangchuansheng/fastgpt-docs@main/assets/imgs/13.png)
 
 ### 更好的限定模型聊天范围
 
 首先，你可以通过调整知识库搜索时的相似度和最大搜索数量，实现从知识库层面限制聊天范围。通常我们可以设置相似度为 0.82，并设置空搜索回复内容。这意味着，如果用户的问题无法在知识库中匹配时，会直接回复预设的内容。
 
-![搜索参数设置](/imgs/14.png)
+![搜索参数设置](https://cdn.jsdelivr.us/gh/yangchuansheng/fastgpt-docs@main/assets/imgs/14.png)
 
-![空搜索控制效果](/imgs/15.png)
+![空搜索控制效果](https://cdn.jsdelivr.us/gh/yangchuansheng/fastgpt-docs@main/assets/imgs/15.png)
 
 由于 openai 向量模型并不是针对中文，所以当问题中有一些知识库内容的关键词时，相似度
 会较高，此时无法从知识库层面进行限定。需要通过限定词进行调整，例如：
@@ -113,7 +113,7 @@ FastGPT 提供了搜索测试和对话测试两种途径对知识库进行微调
 
 效果如下：
 
-![限定词效果](/imgs/16.png)
+![限定词效果](https://cdn.jsdelivr.us/gh/yangchuansheng/fastgpt-docs@main/assets/imgs/16.png)
 
 当然，gpt35 在一定情况下依然是不可控的。
 
@@ -121,7 +121,7 @@ FastGPT 提供了搜索测试和对话测试两种途径对知识库进行微调
 
 与搜索测试类似，你可以直接在对话页里，点击“引用”，来随时修改知识库内容。
 
-![查看答案引用](/imgs/17.png)
+![查看答案引用](https://cdn.jsdelivr.us/gh/yangchuansheng/fastgpt-docs@main/assets/imgs/17.png)
 
 ## 总结
 

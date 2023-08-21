@@ -9,7 +9,7 @@ weight: 410
 
 FastGPT 从 V4 版本开始采用新的交互方式来构建 AI 应用。使用了 Flow 节点编排的方式来实现复杂工作流，提高可玩性和扩展性。但同时也提高了上手的门槛，有一定开发背景的用户使用起来会比较容易。
 
-![](/imgs/flow-intro1.png)
+![](https://cdn.jsdelivr.us/gh/yangchuansheng/fastgpt-docs@main/assets/imgs/flow-intro1.png)
 
 ## 什么是模块？
 
@@ -17,7 +17,7 @@ FastGPT 从 V4 版本开始采用新的交互方式来构建 AI 应用。使用�
 
 如下图，这是一个最简单的 AI 对话。它由用户输入的问题、聊天记录以及 AI 对话模块组成。
 
-![](/imgs/flow-intro2.png)
+![](https://cdn.jsdelivr.us/gh/yangchuansheng/fastgpt-docs@main/assets/imgs/flow-intro2.png)
 
 执行流程如下：
 
@@ -42,7 +42,7 @@ FastGPT 从 V4 版本开始采用新的交互方式来构建 AI 应用。使用�
 + 对于系统模块，通常只有固定参数和输出，主要需要关注输出到哪个位置。
 + 对于功能模块，通常这 3 部分都是重要的，以下图的 AI 对话为例：
 
-   ![](/imgs/flow-intro3.png)
+   ![](https://cdn.jsdelivr.us/gh/yangchuansheng/fastgpt-docs@main/assets/imgs/flow-intro3.png)
    
    - 对话模型、温度、回复上限、系统提示词和限定词为固定参数，同时系统提示词和限定词也可以作为外部输入，意味着如果你有输入流向了系统提示词，那么原本填写的内容就会被**覆盖**。
    - 触发器、引用内容、聊天记录和用户问题则为外部输入，需要从其他模块的输出流入。
@@ -59,7 +59,7 @@ FastGPT 从 V4 版本开始采用新的交互方式来构建 AI 应用。使用�
 
 聊天记录模块会自动执行，因此聊天记录输入会自动赋值。当用户发送问题时，【用户问题】模块会输出值，此时【AI 对话】模块的用户问题输入也会被赋值。两个连接的输入都被赋值后，会执行 【AI 对话】模块。
 
-![](/imgs/flow-intro1.png)
+![](https://cdn.jsdelivr.us/gh/yangchuansheng/fastgpt-docs@main/assets/imgs/flow-intro1.png)
 
 #### 例子 2：
 
@@ -71,7 +71,7 @@ FastGPT 从 V4 版本开始采用新的交互方式来构建 AI 应用。使用�
 4. 【知识库搜索】结果为空时，“搜索结果不为空”的值为空，不会输出，因此【AI 对话】模块会因为触发器没有赋值而无法执行。而“搜索结果为空”会有输出，流向指定回复的触发器，因此【指定回复】模块进行输出。
 5. 【知识库搜索】结果不为空时，“搜索结果不为空”和“引用内容”都有输出，会流向【AI 对话】，此时【AI 对话】的 4 个外部输入都被赋值，开始执行。
 
-![](/imgs/flow-intro4.png)
+![](https://cdn.jsdelivr.us/gh/yangchuansheng/fastgpt-docs@main/assets/imgs/flow-intro4.png)
 
 ## 如何连接模块
 
