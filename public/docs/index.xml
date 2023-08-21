@@ -13,6 +13,8 @@
       
       <guid>/docs/intro/</guid>
       <description>FastGPT 是一个基于 LLM 大语言模型的知识库问答系统，提供开箱即用的数据处理、模型调用等能力。同时可以通过 Flow 可视化进行工作流编排，从而实现复杂的问答场景！
+🤖
+FastGPT 在线体验：https://fastgpt.run
 FastGPT 能力 link1. 专属 AI 客服 link通过导入文档或已有问答对进行训练，让 AI 模型能根据你的文档以交互式对话方式回答问题。
 2. 简单易用的可视化界面 linkFastGPT 采用直观的可视化界面设计，为各种应用场景提供了丰富实用的功能。通过简洁易懂的操作步骤，可以轻松完成 AI 客服的创建和训练流程。
 3. 自动数据预处理 link提供手动输入、直接分段、LLM 自动处理和 CSV 等多种数据导入途径，其中“直接分段”支持通过 PDF、WORD、Markdown 和 CSV 文档内容作为上下文。FastGPT 会自动对文本数据进行预处理、向量化和 QA 分割，节省手动训练时间，提升效能。
@@ -20,8 +22,7 @@ FastGPT 能力 link1. 专属 AI 客服 link通过导入文档或已有问答对�
 5. 强大的 API 集成 linkFastGPT 对外的 API 接口对齐了 OpenAI 官方接口，可以直接接入现有的 GPT 应用，也可以轻松集成到企业微信、公众号、飞书等平台。
 FastGPT 特点 link 项目完全开源
 FastGPT 遵循 Apache License 2.0 开源协议，你可以 Fork 之后进行二次开发和发布。FastGPT 社区版将保留核心功能，商业版仅在社区版基础上使用 API 的形式进行扩展，不影响学习使用。
-独特的 QA 结构
-针对客服问答场景设计的 QA 结构，提高在大量数据场景中的问答准确性。</description>
+独特的 QA 结构</description>
     </item>
     
     <item>
@@ -30,14 +31,19 @@ FastGPT 遵循 Apache License 2.0 开源协议，你可以 Fork 之后进行二�
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/development/</guid>
-      <description>第一次开发，需要先部署数据库，建议本地开发可以随便找一台 2C2G 的轻量小数据库实践。数据库部署教程：Docker 快速部署
-client 目录下为 FastGPT 核心代码。NextJS 框架前后端放在一起，API 服务位于 src/pages/api 目录内。
+      <description>本文档介绍了如何设置开发环境以构建和测试 FastGPT。
+安装依赖项 link您需要在计算机上安装和配置以下依赖项才能构建 FastGPT：
+Git Docker Docker Compose Node.js v18.x (LTS) npm 版本 8.x.x 或 Yarn 本地开发 link要设置一个可工作的开发环境，只需 Fork 项目的 Git 存储库，并部署一个数据库，然后开始进行开发测试。
+Fork存储库 link您需要 Fork 存储库。
+克隆存储库 link克隆您在 GitHub 上 Fork 的存储库：
+git clone git@github.com:&amp;lt;github_username&amp;gt;/FastGPT.git client 目录下为 FastGPT 核心代码。NextJS 框架前后端放在一起，API 服务位于 src/pages/api 目录内。
+安装数据库 link第一次开发，需要先部署数据库，建议本地开发可以随便找一台 2C2G 的轻量小数据库实践。数据库部署教程：Docker 快速部署
 初始配置 link1. 环境变量
 复制.env.template 文件，生成一个.env.local 环境变量文件夹，修改.env.local 里内容才是有效的变量。变量说明见 .env.template
 2. config 配置文件
 复制 data/config.json 文件，生成一个 data/config.local.json 配置文件。
 这个文件大部分时候不需要修改。只需要关注 SystemParams 里的参数：
-vectorMaxProcess: 向量生成最大进程，根据数据库和 key 的并发数来决定，通常单个 120 号，2c4g 服务器设置10~15。 qaMaxProcess: QA 生成最大进程 pgIvfflatProbe: PostgreSQL vector 搜索探针，没有添加 vector 索引时可忽略。 运行 link cd client pnpm i pnpm dev 镜像打包 link docker build -t dockername/fastgpt . </description>
+vectorMaxProcess: 向量生成最大进程，根据数据库和 key 的并发数来决定，通常单个 120 号，2c4g 服务器设置10~15。 qaMaxProcess: QA 生成最大进程 pgIvfflatProbe: PostgreSQL vector 搜索探针，没有添加 vector 索引时可忽略。 运行 link cd client pnpm i pnpm dev 镜像打包 link docker build -t dockername/fastgpt .</description>
     </item>
     
   </channel>

@@ -6,34 +6,6 @@
   </url><url>
     <loc>/docs/</loc>
   </url><url>
-    <loc>/docs/installation/</loc>
-  </url><url>
-    <loc>/docs/installation/sealos/</loc>
-  </url><url>
-    <loc>/docs/installation/docker/</loc>
-  </url><url>
-    <loc>/docs/installation/one-api/</loc>
-  </url><url>
-    <loc>/docs/installation/proxy/</loc>
-  </url><url>
-    <loc>/docs/installation/proxy/nginx/</loc>
-  </url><url>
-    <loc>/docs/installation/proxy/cloudflare/</loc>
-  </url><url>
-    <loc>/docs/installation/proxy/http_proxy/</loc>
-  </url><url>
-    <loc>/docs/reference/</loc>
-  </url><url>
-    <loc>/docs/reference/configuration/</loc>
-  </url><url>
-    <loc>/docs/reference/models/</loc>
-  </url><url>
-    <loc>/docs/upgrading/</loc>
-  </url><url>
-    <loc>/docs/upgrading/40/</loc>
-  </url><url>
-    <loc>/docs/upgrading/41/</loc>
-  </url><url>
     <loc>/docs/workflow/</loc>
   </url><url>
     <loc>/docs/workflow/intro/</loc>
@@ -66,15 +38,43 @@
   </url><url>
     <loc>/docs/development/</loc>
   </url><url>
-    <loc>/docs/additional-setup/</loc>
+    <loc>/docs/use-cases/</loc>
   </url><url>
-    <loc>/docs/additional-setup/prompt/</loc>
+    <loc>/docs/use-cases/prompt/</loc>
   </url><url>
-    <loc>/docs/additional-setup/openai/</loc>
+    <loc>/docs/use-cases/openai/</loc>
   </url><url>
-    <loc>/docs/additional-setup/chatglm2/</loc>
+    <loc>/docs/use-cases/kb/</loc>
   </url><url>
-    <loc>/docs/additional-setup/kb/</loc>
+    <loc>/docs/installation/</loc>
+  </url><url>
+    <loc>/docs/installation/sealos/</loc>
+  </url><url>
+    <loc>/docs/installation/docker/</loc>
+  </url><url>
+    <loc>/docs/installation/one-api/</loc>
+  </url><url>
+    <loc>/docs/installation/proxy/</loc>
+  </url><url>
+    <loc>/docs/installation/proxy/nginx/</loc>
+  </url><url>
+    <loc>/docs/installation/proxy/cloudflare/</loc>
+  </url><url>
+    <loc>/docs/installation/proxy/http_proxy/</loc>
+  </url><url>
+    <loc>/docs/installation/reference/</loc>
+  </url><url>
+    <loc>/docs/installation/reference/configuration/</loc>
+  </url><url>
+    <loc>/docs/installation/reference/models/</loc>
+  </url><url>
+    <loc>/docs/installation/reference/chatglm2/</loc>
+  </url><url>
+    <loc>/docs/installation/upgrading/</loc>
+  </url><url>
+    <loc>/docs/installation/upgrading/40/</loc>
+  </url><url>
+    <loc>/docs/installation/upgrading/41/</loc>
   </url><url>
     <loc>/categories/</loc>
   </url><url>

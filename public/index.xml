@@ -13,6 +13,8 @@
       
       <guid>/docs/intro/</guid>
       <description>FastGPT 是一个基于 LLM 大语言模型的知识库问答系统，提供开箱即用的数据处理、模型调用等能力。同时可以通过 Flow 可视化进行工作流编排，从而实现复杂的问答场景！
+🤖
+FastGPT 在线体验：https://fastgpt.run
 FastGPT 能力 link1. 专属 AI 客服 link通过导入文档或已有问答对进行训练，让 AI 模型能根据你的文档以交互式对话方式回答问题。
 2. 简单易用的可视化界面 linkFastGPT 采用直观的可视化界面设计，为各种应用场景提供了丰富实用的功能。通过简洁易懂的操作步骤，可以轻松完成 AI 客服的创建和训练流程。
 3. 自动数据预处理 link提供手动输入、直接分段、LLM 自动处理和 CSV 等多种数据导入途径，其中“直接分段”支持通过 PDF、WORD、Markdown 和 CSV 文档内容作为上下文。FastGPT 会自动对文本数据进行预处理、向量化和 QA 分割，节省手动训练时间，提升效能。
@@ -20,138 +22,7 @@ FastGPT 能力 link1. 专属 AI 客服 link通过导入文档或已有问答对�
 5. 强大的 API 集成 linkFastGPT 对外的 API 接口对齐了 OpenAI 官方接口，可以直接接入现有的 GPT 应用，也可以轻松集成到企业微信、公众号、飞书等平台。
 FastGPT 特点 link 项目完全开源
 FastGPT 遵循 Apache License 2.0 开源协议，你可以 Fork 之后进行二次开发和发布。FastGPT 社区版将保留核心功能，商业版仅在社区版基础上使用 API 的形式进行扩展，不影响学习使用。
-独特的 QA 结构
-针对客服问答场景设计的 QA 结构，提高在大量数据场景中的问答准确性。</description>
-    </item>
-    
-    <item>
-      <title>Sealos 一键部署</title>
-      <link>/docs/installation/sealos/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/docs/installation/sealos/</guid>
-      <description>Sealos 的服务器在国外，不需要额外处理网络问题，无需服务器、无需魔法、无需域名，支持高并发 &amp;amp; 动态伸缩。点击以下按钮即可一键部署 👇
-由于需要部署数据库，部署完后需要等待 2~4 分钟才能正常访问。默认用了最低配置，首次访问时会有些慢。
-点击 Sealos 提供的外网地址即可打开 FastGPT 的可视化界面。
-用户名：root
-密码就是刚刚一键部署时设置的环境变量</description>
-    </item>
-    
-    <item>
-      <title>Docker Compose 快速部署</title>
-      <link>/docs/installation/docker/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/docs/installation/docker/</guid>
-      <description>准备条件 link1. 准备好代理环境（国外服务器可忽略） link确保可以访问 OpenAI，具体方案可以参考：Nginx 中转
-2. 多模型支持 link推荐使用 one-api 项目来管理模型池，兼容 OpenAI 、Azure 和国内主流模型等。
-具体部署方法可参考该项目的 README，也可以直接通过以下按钮一键部署：
-安装 Docker 和 docker-compose link Linux MacOS Windows # 安装 Docker curl -sSL https://get.daocloud.io/docker | sh systemctl enable --now docker # 安装 docker-compose curl -L https://github.com/docker/compose/releases/download/2.20.3/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose chmod +x /usr/local/bin/docker-compose # 验证安装 docker -v docker-compose -v 推荐直接使用 Orbstack。可直接通过 Homebrew 来安装：
-brew install orbstack 或者直接下载安装包进行安装。
-可以选择直接安装以 WSL2 作为引擎的 Docker Desktop。
-也可以直接在 WSL2 中安装命令行版本的 Docker。</description>
-    </item>
-    
-    <item>
-      <title>部署 one-api，实现多模型支持</title>
-      <link>/docs/installation/one-api/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/docs/installation/one-api/</guid>
-      <description>one-api 是一个 OpenAI 接口管理 &amp;amp; 分发系统，可以通过标准的 OpenAI API 格式访问所有的大模型，开箱即用。
-FastGPT 可以通过接入 one-api 来实现对各种大模型的支持。部署方法也很简单，直接点击以下按钮即可一键部署 👇
-部署完后会跳转「应用管理」，数据库在另一个应用「数据库」中。需要等待 1~3 分钟数据库运行后才能访问成功。
-配置好 one-api 的模型后，可以直接修改 FastGPT 的环境变量：
-# 下面的地址是 Sealos 提供的，务必写上 v1 OPENAI_BASE_URL=https://xxxx.cloud.sealos.io/v1 # 下面的 key 由 one-api 提供 CHAT_API_KEY=sk-xxxxxx </description>
-    </item>
-    
-    <item>
-      <title>Nginx 中转</title>
-      <link>/docs/installation/proxy/nginx/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/docs/installation/proxy/nginx/</guid>
-      <description>登录 Sealos linkSealos
-创建应用 link打开 「应用管理」，点击「新建应用」：
-填写基本配置 link务必开启外网访问，复制外网访问提供的地址。
-添加配置文件 link 复制下面这段配置文件，注意 server_name 后面的内容替换成第二步的外网访问地址。
-user nginx; worker_processes auto; worker_rlimit_nofile 51200; events { worker_connections 1024; } http { resolver 8.8.8.8; proxy_ssl_server_name on; access_log off; server_names_hash_bucket_size 512; client_header_buffer_size 64k; large_client_header_buffers 4 64k; client_max_body_size 50M; proxy_connect_timeout 240s; proxy_read_timeout 240s; proxy_buffer_size 128k; proxy_buffers 4 256k; server { listen 80; server_name tgohwtdlrmer.cloud.sealos.io; # 这个地方替换成 Sealos 提供的外网地址 location ~ /openai/(.*) { proxy_pass https://api.openai.com/$1$is_args$args; proxy_set_header Host api.openai.com; proxy_set_header X-Real-IP $remote_addr; proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for; # 如果响应是流式的 proxy_set_header Connection &amp;#39;&amp;#39;; proxy_http_version 1.</description>
-    </item>
-    
-    <item>
-      <title>Cloudflare Worker 中转</title>
-      <link>/docs/installation/proxy/cloudflare/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/docs/installation/proxy/cloudflare/</guid>
-      <description>参考 &amp;ldquo;不做了睡觉&amp;rdquo; 的教程
-workers 配置文件
-const TELEGRAPH_URL = &amp;#39;https://api.openai.com&amp;#39;; addEventListener(&amp;#39;fetch&amp;#39;, (event) =&amp;gt; { event.respondWith(handleRequest(event.request)); }); async function handleRequest(request) { // 安全校验 if (request.headers.get(&amp;#39;auth&amp;#39;) !== &amp;#39;auth_code&amp;#39;) { return new Response(&amp;#39;UnAuthorization&amp;#39;, { status: 403 }); } const url = new URL(request.url); url.host = TELEGRAPH_URL.replace(/^https?:\/\//, &amp;#39;&amp;#39;); const modifiedRequest = new Request(url.toString(), { headers: request.headers, method: request.method, body: request.body, redirect: &amp;#39;follow&amp;#39; }); const response = await fetch(modifiedRequest); const modifiedResponse = new Response(response.body, response); // 添加允许跨域访问的响应头 modifiedResponse.</description>
-    </item>
-    
-    <item>
-      <title>HTTP 代理中转</title>
-      <link>/docs/installation/proxy/http_proxy/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/docs/installation/proxy/http_proxy/</guid>
-      <description>如果你有代理工具（例如 Clash 或者 sing-box），也可以使用 HTTP 代理来访问 OpenAI。只需要添加以下两个环境变量即可：
-AXIOS_PROXY_HOST= AXIOS_PROXY_PORT= 以 Clash 为例，建议指定 api.openai.com 走代理，其他请求都直连。示例配置如下：
-mixed-port: 7890 allow-lan: false bind-address: &amp;#39;*&amp;#39; mode: rule log-level: warning dns: enable: true ipv6: false nameserver: - 8.8.8.8 - 8.8.4.4 cache-size: 400 proxies: - proxy-groups: - { name: &amp;#39;♻️ 自动选择&amp;#39;, type: url-test, proxies: [香港V01×1.5], url: &amp;#39;https://api.openai.com&amp;#39;, interval: 3600} rules: - &amp;#39;DOMAIN-SUFFIX,api.openai.com,♻️ 自动选择&amp;#39; - &amp;#39;MATCH,DIRECT&amp;#39; 然后给 FastGPT 添加两个环境变量：
-AXIOS_PROXY_HOST=127.0.0.1 AXIOS_PROXY_PORT=7890 </description>
-    </item>
-    
-    <item>
-      <title>配置详解</title>
-      <link>/docs/reference/configuration/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/docs/reference/configuration/</guid>
-      <description>由于环境变量不利于配置复杂的内容，新版 FastGPT 采用了 ConfigMap 的形式挂载配置文件，你可以在 client/data/config.json 看到默认的配置文件。可以参考 docker-compose 快速部署 来挂载配置文件。
-开发环境下，你需要将示例配置文件 config.json 复制成 config.local.json 文件才会生效。
-注意: 为了方便介绍，文档介绍里会把注释写到 json 文件，实际运行时候 json 文件不能包含注释。
-这个配置文件中包含了前端页面定制、系统级参数、AI 对话的模型等……
-warning 注意：下面的配置介绍仅是局部介绍，你需要完整挂载整个 config.json，不能仅挂载一部分。你可以直接在默认的 config.json 基础上根据下面的介绍进行修改。
-基础字段粗略说明 link这里介绍一些基础的配置字段：
-// 这个配置会控制前端的一些样式 &amp;#34;FeConfig&amp;#34;: { &amp;#34;show_emptyChat&amp;#34;: true, // 对话页面，空内容时，是否展示介绍页 &amp;#34;show_register&amp;#34;: false, // 是否展示注册按键（包括忘记密码，注册账号和三方登录） &amp;#34;show_appStore&amp;#34;: false, // 是否展示应用市场（不过目前权限还没做好，放开也没用） &amp;#34;show_userDetail&amp;#34;: false, // 是否展示用户详情（账号余额、OpenAI 绑定） &amp;#34;show_git&amp;#34;: true, // 是否展示 Git &amp;#34;systemTitle&amp;#34;: &amp;#34;FastGPT&amp;#34;, // 系统的 title &amp;#34;authorText&amp;#34;: &amp;#34;Made by FastGPT Team.&amp;#34;, // 签名 &amp;#34;gitLoginKey&amp;#34;: &amp;#34;&amp;#34; // Git 登录凭证 }, .</description>
-    </item>
-    
-    <item>
-      <title>多模型支持</title>
-      <link>/docs/reference/models/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/docs/reference/models/</guid>
-      <description>默认情况下，FastGPT 只配置了 GPT 的 3 个模型，如果你需要接入其他模型，需要进行一些额外配置。
-部署 one-api link首先你需要部署一个 one-api，并添加对应的【渠道】
-添加 FastGPT 配置 link可以在 /client/src/data/config.json 里找到配置文件（本地开发需要复制成 config.local.json），配置文件中有一项是对话模型配置：
-&amp;#34;ChatModels&amp;#34;: [ { &amp;#34;model&amp;#34;: &amp;#34;gpt-3.5-turbo&amp;#34;, // 这里的模型需要对应 OneAPI 的模型 &amp;#34;name&amp;#34;: &amp;#34;FastAI-4k&amp;#34;, // 对外展示的名称 &amp;#34;contextMaxToken&amp;#34;: 4000, // 最大长下文 token，无论什么模型都按 GPT35 的计算。GPT 外的模型需要自行大致计算下这个值。可以调用官方接口去比对 Token 的倍率，然后在这里粗略计算。 // 例如：文心一言的中英文 token 基本是 1:1，而 GPT 的中文 Token 是 2:1，如果文心一言官方最大 Token 是 4000，那么这里就可以填 8000，保险点就填 7000. &amp;#34;quoteMaxToken&amp;#34;: 2000, // 引用知识库的最大 Token &amp;#34;maxTemperature&amp;#34;: 1.2, // 最大温度 &amp;#34;price&amp;#34;: 1.5, // 1个token 价格 =&amp;gt; 1.</description>
-    </item>
-    
-    <item>
-      <title>升级到 V4.0</title>
-      <link>/docs/upgrading/40/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/docs/upgrading/40/</guid>
-      <description>如果您是从旧版本升级到 V4，由于新版 MongoDB 表变更比较大，需要按照本文档的说明执行一些初始化脚本。
-重命名表名 link需要连接上 MongoDB 数据库，执行两条命令：
-db.models.renameCollection(&amp;#34;apps&amp;#34;) db.sharechats.renameCollection(&amp;#34;outlinks&amp;#34;) warning 注意：从旧版更新到 V4， MongoDB 会自动创建空表，你需要先手动删除这两个空表，再执行上面的操作。
-初始化几个表中的字段 link依次执行下面 3 条命令，时间比较长，不成功可以重复执行（会跳过已经初始化的数据），直到所有数据更新完成。
-db.chats.find({appId: {$exists: false}}).forEach(function(item){ db.chats.updateOne( { _id: item._id, }, { &amp;#34;$set&amp;#34;: {&amp;#34;appId&amp;#34;:item.modelId}} ) }) db.collections.find({appId: {$exists: false}}).forEach(function(item){ db.collections.updateOne( { _id: item._id, }, { &amp;#34;$set&amp;#34;: {&amp;#34;appId&amp;#34;:item.modelId}} ) }) db.outlinks.find({shareId: {$exists: false}}).forEach(function(item){ db.outlinks.updateOne( { _id: item._id, }, { &amp;#34;$set&amp;#34;: {&amp;#34;shareId&amp;#34;:item._id.toString(),&amp;#34;appId&amp;#34;:item.modelId}} ) }) 初始化 API link部署新版项目，并发起 3 个 HTTP 请求（记得携带 headers.rootkey，这个值是环境变量里的）
-https://xxxxx/api/admin/initv4 https://xxxxx/api/admin/initChat https://xxxxx/api/admin/initOutlink 1 和 2 有可能会因为内存不足挂掉，可以重复执行。</description>
-    </item>
-    
-    <item>
-      <title>升级到 V4.1</title>
-      <link>/docs/upgrading/41/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/docs/upgrading/41/</guid>
-      <description>如果您是从旧版本升级到 V4，由于新版重新设置了对话存储结构，需要初始化原来的存储内容。
-更新环境变量 linkV4.1 优化了 PostgreSQL 和 MongoDB 的连接变量，只需要填 1 个 URL 即可：
-# mongo 配置，不需要改. 如果连不上，可能需要去掉 ?authSource=admin - MONGODB_URI=mongodb://username:password@mongo:27017/fastgpt?authSource=admin # pg配置. 不需要改 - PG_URL=postgresql://username:password@pg:5432/postgres 初始化 API link部署新版项目，并发起 1 个 HTTP 请求（记得携带 headers.rootkey，这个值是环境变量里的）
-https://xxxxx/api/admin/initChatItem </description>
+独特的 QA 结构</description>
     </item>
     
     <item>
@@ -319,31 +190,36 @@ import cloud from &amp;#39;@lafjs/cloud&amp;#39;; const googleSearchKey = &amp;#
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/docs/development/</guid>
-      <description>第一次开发，需要先部署数据库，建议本地开发可以随便找一台 2C2G 的轻量小数据库实践。数据库部署教程：Docker 快速部署
-client 目录下为 FastGPT 核心代码。NextJS 框架前后端放在一起，API 服务位于 src/pages/api 目录内。
+      <description>本文档介绍了如何设置开发环境以构建和测试 FastGPT。
+安装依赖项 link您需要在计算机上安装和配置以下依赖项才能构建 FastGPT：
+Git Docker Docker Compose Node.js v18.x (LTS) npm 版本 8.x.x 或 Yarn 本地开发 link要设置一个可工作的开发环境，只需 Fork 项目的 Git 存储库，并部署一个数据库，然后开始进行开发测试。
+Fork存储库 link您需要 Fork 存储库。
+克隆存储库 link克隆您在 GitHub 上 Fork 的存储库：
+git clone git@github.com:&amp;lt;github_username&amp;gt;/FastGPT.git client 目录下为 FastGPT 核心代码。NextJS 框架前后端放在一起，API 服务位于 src/pages/api 目录内。
+安装数据库 link第一次开发，需要先部署数据库，建议本地开发可以随便找一台 2C2G 的轻量小数据库实践。数据库部署教程：Docker 快速部署
 初始配置 link1. 环境变量
 复制.env.template 文件，生成一个.env.local 环境变量文件夹，修改.env.local 里内容才是有效的变量。变量说明见 .env.template
 2. config 配置文件
 复制 data/config.json 文件，生成一个 data/config.local.json 配置文件。
 这个文件大部分时候不需要修改。只需要关注 SystemParams 里的参数：
-vectorMaxProcess: 向量生成最大进程，根据数据库和 key 的并发数来决定，通常单个 120 号，2c4g 服务器设置10~15。 qaMaxProcess: QA 生成最大进程 pgIvfflatProbe: PostgreSQL vector 搜索探针，没有添加 vector 索引时可忽略。 运行 link cd client pnpm i pnpm dev 镜像打包 link docker build -t dockername/fastgpt . </description>
+vectorMaxProcess: 向量生成最大进程，根据数据库和 key 的并发数来决定，通常单个 120 号，2c4g 服务器设置10~15。 qaMaxProcess: QA 生成最大进程 pgIvfflatProbe: PostgreSQL vector 搜索探针，没有添加 vector 索引时可忽略。 运行 link cd client pnpm i pnpm dev 镜像打包 link docker build -t dockername/fastgpt .</description>
     </item>
     
     <item>
       <title>提示词示例</title>
-      <link>/docs/additional-setup/prompt/</link>
+      <link>/docs/use-cases/prompt/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/additional-setup/prompt/</guid>
+      <guid>/docs/use-cases/prompt/</guid>
       <description>客服 link 您好您将扮演万千紧固件公司的售前客服。在第一次咨询中，您需要获取客户的联系人姓名和手机号码，并了解客户是终端生产企业还是工贸经销商。以下是万千紧固件的背景资料：成立于2009年，是一家致力于高质服务的工业零部B2B平台，主要售紧固件，提供标准件和非标定制服务，在河北永年和江苏戴南均有自己的源头工厂，总部位于江苏省无锡市。 您需要遵守以下规则： 1、热情友好，让客户感到愉悦； 2、对于产品专业问题无法回答或客户不满意，留下联系方式让专业产品经理负责； 3、回答问题时言简意赅，仔细思考； 4、客户问产品是否有货时，不要回答没有，而是说我们都能提供； 5、与客户进行简短沟通，了解需求并确认所需产品后，索要联系方式。 样本示例1： 客户：在吗？ 客服：在的，请问您需要咨询什么产品？ 客户：防盗螺栓有吗？ 客服：有的，我们提供全品类的紧固件产品，请告诉我具体的型号和用途。 客户：用在铁塔机器上的，2040304不锈钢 客服：请问需要多少件？ 客户：大概10万颗左右吧 客户：给我个报价，优惠些，长期合作 客服：非常抱歉，报价需要我们专业的产品同事，您能留下联系方式吗？我会安排他们立即与您联系。 客户：王先，13928916752今天能联系么 客服：可以的，我们的同事会在1个小时内与您联系，请注意接听来自无锡的电话。谢谢您的咨询。 样本示例2： 客户：请问一下这个螺栓有没有33长度的？ 客服：您好，我是客服小万，请问您需要的是哪种螺栓？能说得更具体一些吗？ 客户：圆头方颈。 客服：头部多大？ 客户：13。 客户：M6的。 客服：您要的是哪个材质的呢？ 客户：碳钢的，强度高一点。 客服：您需要多少个呢？ 客户：大约2000个左右。 客服：方便留下您的联系方式吗？ 客服：我会让同事在上午与您确认并回复。 客户：18217699040。 客服：请问您的姓氏是？ 客户：王。 客服：好的。 客户：谢谢。 样本示例3： 客户：你们是生产还是贸易？ 客服：亲，感谢您的咨询。我们既生产也贸易，同时接受标准件和非标定制的订单。请问您需要采购什么产品？ 客户：SPR25x100L铜套的304材质螺母M64。 客户：我想找源头工厂。 客服：亲，我们就是源头工厂哦！请问您是关心价格还是质量呢？我们万千是国内大品牌，价格实惠，质量和交期都有保障。 客户：工厂放心点，经销商门道太多。 客服：亲，您可以放心，我们的产品质量有保障，如有不满意可退换；有问题我们也有专属客服经理24小时处理。 客服：请问您具体需要多少数量呢？ 客户：2456个。 客户：什么时候能给出报价？我这边比较着急使用。 客服：亲，请留下您的联系方式，我会让我们专业的产品同事与您联系。 客户：13928956789，李。 样本示例4： 客户：你好，在吗？ 客服：在的。 客服：请问您需要什么产品？ 客户：卡箍有吗？ 客服：有的，您需要哪一种？ 客户：我是用在电线杆上的。 客户：我需要200个。 客服：好的，您需要什么材质的？ 客户：有图片吗？我想看看是不是我需要的那种，材质无所谓。 客服：好的，方便加您微信吗？在线上不方便发图片，加微信后我会给您发送图片以进行确认。 客户：您的微信是多少？我加您。 客服：好的，我的微信是18626076792，您可以添加一下。您也可以直接拨打电话与我们联系。 客户：已添加，请通过微信沟通。 客服：好的，已通过，我需要记录一下，请问您的电话方便吗？ 客户：187628100000。 服：请问您的姓氏是？ 客户：陈。 客服：好的。 客户：谢谢。 样本示例5： 客户：87322.</description>
     </item>
     
     <item>
       <title>对接第三方 GPT 应用</title>
-      <link>/docs/additional-setup/openai/</link>
+      <link>/docs/use-cases/openai/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/additional-setup/openai/</guid>
+      <guid>/docs/use-cases/openai/</guid>
       <description>获取 API 秘钥 link依次选择应用 -&amp;gt; 「API访问」，然后点击「API 密钥」来创建密钥。
 warning 密钥需要自己保管好，一旦关闭就无法再复制密钥，只能创建新密钥再复制。
 组合秘钥 link利用刚复制的 API 秘钥加上 AppId 组合成一个新的秘钥，格式为：API 秘钥-AppId，例如：fastgpt-z51pkjqm9nrk03a1rx2funoy-642adec15f04d67d4613efdb。
@@ -352,11 +228,130 @@ ChatGPT Web 示例：</description>
     </item>
     
     <item>
-      <title> 接入 ChatGLM2-6B</title>
-      <link>/docs/additional-setup/chatglm2/</link>
+      <title> 打造高质量 AI 知识库</title>
+      <link>/docs/use-cases/kb/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/additional-setup/chatglm2/</guid>
+      <guid>/docs/use-cases/kb/</guid>
+      <description>前言 link自从去年 12 月 ChatGPT 发布后，带动了新的一轮应用交互革命。尤其是 GPT-3.5 接口全面放开后，LLM 应用雨后春笋般快速涌现，但因为 GPT 的可控性、随机性和合规性等问题，很多应用场景都没法落地。
+3 月时候，在 Twitter 上刷到一个老哥使用 GPT 训练自己的博客记录，并且成本非常低（比起 FT）。他给出了一个完整的流程图：
+看到这个推文后，我灵机一动，应用场景就十分清晰了。直接上手开干，在经过不到 1 个月时间，FastGPT 在原来多助手管理基础上，加入了向量搜索。于是便有了最早的一期视频：
+&lt;!DOCTYPE HTML&gt; 3 个月过去了，FastGPT 延续着早期的思路去完善和扩展，目前在向量搜索 + LLM 线性问答方面的功能基本上完成了。不过我们始终没有出一期关于如何构建知识库的教程，趁着 V4 在开发中，我们计划介绍一期《如何在 FastGPT 上构建高质量知识库》，以便大家更好的使用。
+FastGPT 知识库完整逻辑 link在正式构建知识库前，我们先来了解下 FastGPT 是如何进行知识库检索的。首先了解几个基本概念：
+向量：将人类直观的语言（文字、图片、视频等）转成计算机可识别的语言（数组）。 向量相似度：两个向量之间可以进行计算，得到一个相似度，即代表：两个语言相似的程度。 语言大模型的一些特点：上下文理解、总结和推理。 结合上述 3 个概念，便有了 “向量搜索 + 大模型 = 知识库问答” 的公式。下图是 FastGPT V3 中知识库问答功能的完整逻辑：
+与大部分其他知识库问答产品不一样的是， FastGPT 采用了 QA 问答对进行存储，而不是仅进行 chunk（文本分块）处理。目的是为了减少向量化内容的长度，让向量能更好的表达文本的含义，从而提高搜索精准度。 此外 FastGPT 还提供了搜索测试和对话测试两种途径对数据进行调整，从而方便用户调整自己的数据。根据上述流程和方式，我们以构建一个 FastGPT 常见问题机器人为例，展示如何构建一个高质量的 AI 知识库。
+构建知识库应用 link首先，先创建一个 FastGPT 常见问题知识库</description>
+    </item>
+    
+    <item>
+      <title>Sealos 一键部署</title>
+      <link>/docs/installation/sealos/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/installation/sealos/</guid>
+      <description>Sealos 的服务器在国外，不需要额外处理网络问题，无需服务器、无需魔法、无需域名，支持高并发 &amp;amp; 动态伸缩。点击以下按钮即可一键部署 👇
+由于需要部署数据库，部署完后需要等待 2~4 分钟才能正常访问。默认用了最低配置，首次访问时会有些慢。
+点击 Sealos 提供的外网地址即可打开 FastGPT 的可视化界面。
+用户名：root
+密码就是刚刚一键部署时设置的环境变量</description>
+    </item>
+    
+    <item>
+      <title>Docker Compose 快速部署</title>
+      <link>/docs/installation/docker/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/installation/docker/</guid>
+      <description>准备条件 link1. 准备好代理环境（国外服务器可忽略） link确保可以访问 OpenAI，具体方案可以参考：Nginx 中转
+2. 多模型支持 link推荐使用 one-api 项目来管理模型池，兼容 OpenAI 、Azure 和国内主流模型等。
+具体部署方法可参考该项目的 README，也可以直接通过以下按钮一键部署：
+安装 Docker 和 docker-compose link Linux MacOS Windows # 安装 Docker curl -sSL https://get.daocloud.io/docker | sh systemctl enable --now docker # 安装 docker-compose curl -L https://github.com/docker/compose/releases/download/2.20.3/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose chmod +x /usr/local/bin/docker-compose # 验证安装 docker -v docker-compose -v 推荐直接使用 Orbstack。可直接通过 Homebrew 来安装：
+brew install orbstack 或者直接下载安装包进行安装。
+我们建议将源代码和其他数据绑定到 Linux 容器中时，将其存储在 Linux 文件系统中，而不是 Windows 文件系统中。</description>
+    </item>
+    
+    <item>
+      <title>部署 one-api，实现多模型支持</title>
+      <link>/docs/installation/one-api/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/installation/one-api/</guid>
+      <description>one-api 是一个 OpenAI 接口管理 &amp;amp; 分发系统，可以通过标准的 OpenAI API 格式访问所有的大模型，开箱即用。
+FastGPT 可以通过接入 one-api 来实现对各种大模型的支持。部署方法也很简单，直接点击以下按钮即可一键部署 👇
+部署完后会跳转「应用管理」，数据库在另一个应用「数据库」中。需要等待 1~3 分钟数据库运行后才能访问成功。
+配置好 one-api 的模型后，可以直接修改 FastGPT 的环境变量：
+# 下面的地址是 Sealos 提供的，务必写上 v1 OPENAI_BASE_URL=https://xxxx.cloud.sealos.io/v1 # 下面的 key 由 one-api 提供 CHAT_API_KEY=sk-xxxxxx </description>
+    </item>
+    
+    <item>
+      <title>Nginx 中转</title>
+      <link>/docs/installation/proxy/nginx/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/installation/proxy/nginx/</guid>
+      <description>登录 Sealos linkSealos
+创建应用 link打开 「应用管理」，点击「新建应用」：
+填写基本配置 link务必开启外网访问，复制外网访问提供的地址。
+添加配置文件 link 复制下面这段配置文件，注意 server_name 后面的内容替换成第二步的外网访问地址。
+user nginx; worker_processes auto; worker_rlimit_nofile 51200; events { worker_connections 1024; } http { resolver 8.8.8.8; proxy_ssl_server_name on; access_log off; server_names_hash_bucket_size 512; client_header_buffer_size 64k; large_client_header_buffers 4 64k; client_max_body_size 50M; proxy_connect_timeout 240s; proxy_read_timeout 240s; proxy_buffer_size 128k; proxy_buffers 4 256k; server { listen 80; server_name tgohwtdlrmer.cloud.sealos.io; # 这个地方替换成 Sealos 提供的外网地址 location ~ /openai/(.*) { proxy_pass https://api.openai.com/$1$is_args$args; proxy_set_header Host api.openai.com; proxy_set_header X-Real-IP $remote_addr; proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for; # 如果响应是流式的 proxy_set_header Connection &amp;#39;&amp;#39;; proxy_http_version 1.</description>
+    </item>
+    
+    <item>
+      <title>Cloudflare Worker 中转</title>
+      <link>/docs/installation/proxy/cloudflare/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/installation/proxy/cloudflare/</guid>
+      <description>参考 &amp;ldquo;不做了睡觉&amp;rdquo; 的教程
+workers 配置文件
+const TELEGRAPH_URL = &amp;#39;https://api.openai.com&amp;#39;; addEventListener(&amp;#39;fetch&amp;#39;, (event) =&amp;gt; { event.respondWith(handleRequest(event.request)); }); async function handleRequest(request) { // 安全校验 if (request.headers.get(&amp;#39;auth&amp;#39;) !== &amp;#39;auth_code&amp;#39;) { return new Response(&amp;#39;UnAuthorization&amp;#39;, { status: 403 }); } const url = new URL(request.url); url.host = TELEGRAPH_URL.replace(/^https?:\/\//, &amp;#39;&amp;#39;); const modifiedRequest = new Request(url.toString(), { headers: request.headers, method: request.method, body: request.body, redirect: &amp;#39;follow&amp;#39; }); const response = await fetch(modifiedRequest); const modifiedResponse = new Response(response.body, response); // 添加允许跨域访问的响应头 modifiedResponse.</description>
+    </item>
+    
+    <item>
+      <title>HTTP 代理中转</title>
+      <link>/docs/installation/proxy/http_proxy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/installation/proxy/http_proxy/</guid>
+      <description>如果你有代理工具（例如 Clash 或者 sing-box），也可以使用 HTTP 代理来访问 OpenAI。只需要添加以下两个环境变量即可：
+AXIOS_PROXY_HOST= AXIOS_PROXY_PORT= 以 Clash 为例，建议指定 api.openai.com 走代理，其他请求都直连。示例配置如下：
+mixed-port: 7890 allow-lan: false bind-address: &amp;#39;*&amp;#39; mode: rule log-level: warning dns: enable: true ipv6: false nameserver: - 8.8.8.8 - 8.8.4.4 cache-size: 400 proxies: - proxy-groups: - { name: &amp;#39;♻️ 自动选择&amp;#39;, type: url-test, proxies: [香港V01×1.5], url: &amp;#39;https://api.openai.com&amp;#39;, interval: 3600} rules: - &amp;#39;DOMAIN-SUFFIX,api.openai.com,♻️ 自动选择&amp;#39; - &amp;#39;MATCH,DIRECT&amp;#39; 然后给 FastGPT 添加两个环境变量：
+AXIOS_PROXY_HOST=127.0.0.1 AXIOS_PROXY_PORT=7890 </description>
+    </item>
+    
+    <item>
+      <title>配置详解</title>
+      <link>/docs/installation/reference/configuration/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/installation/reference/configuration/</guid>
+      <description>由于环境变量不利于配置复杂的内容，新版 FastGPT 采用了 ConfigMap 的形式挂载配置文件，你可以在 client/data/config.json 看到默认的配置文件。可以参考 docker-compose 快速部署 来挂载配置文件。
+开发环境下，你需要将示例配置文件 config.json 复制成 config.local.json 文件才会生效。
+注意: 为了方便介绍，文档介绍里会把注释写到 json 文件，实际运行时候 json 文件不能包含注释。
+这个配置文件中包含了前端页面定制、系统级参数、AI 对话的模型等……
+warning 注意：下面的配置介绍仅是局部介绍，你需要完整挂载整个 config.json，不能仅挂载一部分。你可以直接在默认的 config.json 基础上根据下面的介绍进行修改。
+基础字段粗略说明 link这里介绍一些基础的配置字段：
+// 这个配置会控制前端的一些样式 &amp;#34;FeConfig&amp;#34;: { &amp;#34;show_emptyChat&amp;#34;: true, // 对话页面，空内容时，是否展示介绍页 &amp;#34;show_register&amp;#34;: false, // 是否展示注册按键（包括忘记密码，注册账号和三方登录） &amp;#34;show_appStore&amp;#34;: false, // 是否展示应用市场（不过目前权限还没做好，放开也没用） &amp;#34;show_userDetail&amp;#34;: false, // 是否展示用户详情（账号余额、OpenAI 绑定） &amp;#34;show_git&amp;#34;: true, // 是否展示 Git &amp;#34;systemTitle&amp;#34;: &amp;#34;FastGPT&amp;#34;, // 系统的 title &amp;#34;authorText&amp;#34;: &amp;#34;Made by FastGPT Team.&amp;#34;, // 签名 &amp;#34;gitLoginKey&amp;#34;: &amp;#34;&amp;#34; // Git 登录凭证 }, .</description>
+    </item>
+    
+    <item>
+      <title>多模型支持</title>
+      <link>/docs/installation/reference/models/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/installation/reference/models/</guid>
+      <description>默认情况下，FastGPT 只配置了 GPT 的 3 个模型，如果你需要接入其他模型，需要进行一些额外配置。
+部署 one-api link首先你需要部署一个 one-api，并添加对应的【渠道】
+添加 FastGPT 配置 link可以在 /client/src/data/config.json 里找到配置文件（本地开发需要复制成 config.local.json），配置文件中有一项是对话模型配置：
+&amp;#34;ChatModels&amp;#34;: [ { &amp;#34;model&amp;#34;: &amp;#34;gpt-3.5-turbo&amp;#34;, // 这里的模型需要对应 OneAPI 的模型 &amp;#34;name&amp;#34;: &amp;#34;FastAI-4k&amp;#34;, // 对外展示的名称 &amp;#34;contextMaxToken&amp;#34;: 4000, // 最大长下文 token，无论什么模型都按 GPT35 的计算。GPT 外的模型需要自行大致计算下这个值。可以调用官方接口去比对 Token 的倍率，然后在这里粗略计算。 // 例如：文心一言的中英文 token 基本是 1:1，而 GPT 的中文 Token 是 2:1，如果文心一言官方最大 Token 是 4000，那么这里就可以填 8000，保险点就填 7000. &amp;#34;quoteMaxToken&amp;#34;: 2000, // 引用知识库的最大 Token &amp;#34;maxTemperature&amp;#34;: 1.2, // 最大温度 &amp;#34;price&amp;#34;: 1.5, // 1个token 价格 =&amp;gt; 1.</description>
+    </item>
+    
+    <item>
+      <title>接入 ChatGLM2-6B</title>
+      <link>/docs/installation/reference/chatglm2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/installation/reference/chatglm2/</guid>
       <description>前言 linkFastGPT 允许你使用自己的 OpenAI API KEY 来快速调用 OpenAI 接口，目前集成了 GPT-3.5, GPT-4 和 embedding，可构建自己的知识库。但考虑到数据安全的问题，我们并不能将所有的数据都交付给云端大模型。
 那么如何在 FastGPT 上接入私有化模型呢？本文就以清华的 ChatGLM2 为例，为各位讲解如何在 FastGPT 中接入私有化模型。
 ChatGLM2-6B 简介 linkChatGLM2-6B 是开源中英双语对话模型 ChatGLM-6B 的第二代版本，具体介绍可参阅 ChatGLM2-6B 项目主页。
@@ -367,19 +362,29 @@ warning 注意，ChatGLM2-6B 权重对学术研究完全开放，在获得官方
     </item>
     
     <item>
-      <title> 打造高质量 AI 知识库</title>
-      <link>/docs/additional-setup/kb/</link>
+      <title>升级到 V4.0</title>
+      <link>/docs/installation/upgrading/40/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/docs/additional-setup/kb/</guid>
-      <description>前言 link自从去年 12 月 ChatGPT 发布后，带动了新的一轮应用交互革命。尤其是 GPT-3.5 接口全面放开后，LLM 应用雨后春笋般快速涌现，但因为 GPT 的可控性、随机性和合规性等问题，很多应用场景都没法落地。
-3 月时候，在 Twitter 上刷到一个老哥使用 GPT 训练自己的博客记录，并且成本非常低（比起 FT）。他给出了一个完整的流程图：
-看到这个推文后，我灵机一动，应用场景就十分清晰了。直接上手开干，在经过不到 1 个月时间，FastGPT 在原来多助手管理基础上，加入了向量搜索。于是便有了最早的一期视频：
-&lt;!DOCTYPE HTML&gt; 3 个月过去了，FastGPT 延续着早期的思路去完善和扩展，目前在向量搜索 + LLM 线性问答方面的功能基本上完成了。不过我们始终没有出一期关于如何构建知识库的教程，趁着 V4 在开发中，我们计划介绍一期《如何在 FastGPT 上构建高质量知识库》，以便大家更好的使用。
-FastGPT 知识库完整逻辑 link在正式构建知识库前，我们先来了解下 FastGPT 是如何进行知识库检索的。首先了解几个基本概念：
-向量：将人类直观的语言（文字、图片、视频等）转成计算机可识别的语言（数组）。 向量相似度：两个向量之间可以进行计算，得到一个相似度，即代表：两个语言相似的程度。 语言大模型的一些特点：上下文理解、总结和推理。 结合上述 3 个概念，便有了 “向量搜索 + 大模型 = 知识库问答” 的公式。下图是 FastGPT V3 中知识库问答功能的完整逻辑：
-与大部分其他知识库问答产品不一样的是， FastGPT 采用了 QA 问答对进行存储，而不是仅进行 chunk（文本分块）处理。目的是为了减少向量化内容的长度，让向量能更好的表达文本的含义，从而提高搜索精准度。 此外 FastGPT 还提供了搜索测试和对话测试两种途径对数据进行调整，从而方便用户调整自己的数据。根据上述流程和方式，我们以构建一个 FastGPT 常见问题机器人为例，展示如何构建一个高质量的 AI 知识库。
-构建知识库应用 link首先，先创建一个 FastGPT 常见问题知识库</description>
+      <guid>/docs/installation/upgrading/40/</guid>
+      <description>如果您是从旧版本升级到 V4，由于新版 MongoDB 表变更比较大，需要按照本文档的说明执行一些初始化脚本。
+重命名表名 link需要连接上 MongoDB 数据库，执行两条命令：
+db.models.renameCollection(&amp;#34;apps&amp;#34;) db.sharechats.renameCollection(&amp;#34;outlinks&amp;#34;) warning 注意：从旧版更新到 V4， MongoDB 会自动创建空表，你需要先手动删除这两个空表，再执行上面的操作。
+初始化几个表中的字段 link依次执行下面 3 条命令，时间比较长，不成功可以重复执行（会跳过已经初始化的数据），直到所有数据更新完成。
+db.chats.find({appId: {$exists: false}}).forEach(function(item){ db.chats.updateOne( { _id: item._id, }, { &amp;#34;$set&amp;#34;: {&amp;#34;appId&amp;#34;:item.modelId}} ) }) db.collections.find({appId: {$exists: false}}).forEach(function(item){ db.collections.updateOne( { _id: item._id, }, { &amp;#34;$set&amp;#34;: {&amp;#34;appId&amp;#34;:item.modelId}} ) }) db.outlinks.find({shareId: {$exists: false}}).forEach(function(item){ db.outlinks.updateOne( { _id: item._id, }, { &amp;#34;$set&amp;#34;: {&amp;#34;shareId&amp;#34;:item._id.toString(),&amp;#34;appId&amp;#34;:item.modelId}} ) }) 初始化 API link部署新版项目，并发起 3 个 HTTP 请求（记得携带 headers.rootkey，这个值是环境变量里的）
+https://xxxxx/api/admin/initv4 https://xxxxx/api/admin/initChat https://xxxxx/api/admin/initOutlink 1 和 2 有可能会因为内存不足挂掉，可以重复执行。</description>
+    </item>
+    
+    <item>
+      <title>升级到 V4.1</title>
+      <link>/docs/installation/upgrading/41/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/installation/upgrading/41/</guid>
+      <description>如果您是从旧版本升级到 V4.1，由于新版重新设置了对话存储结构，需要初始化原来的存储内容。
+更新环境变量 linkV4.1 优化了 PostgreSQL 和 MongoDB 的连接变量，只需要填 1 个 URL 即可：
+# mongo 配置，不需要改. 如果连不上，可能需要去掉 ?authSource=admin - MONGODB_URI=mongodb://username:password@mongo:27017/fastgpt?authSource=admin # pg配置. 不需要改 - PG_URL=postgresql://username:password@pg:5432/postgres 初始化 API link部署新版项目，并发起 1 个 HTTP 请求（记得携带 headers.rootkey，这个值是环境变量里的）
+https://xxxxx/api/admin/initChatItem </description>
     </item>
     
   </channel>

@@ -21,7 +21,7 @@ weight: 423
 
 ### 对话模型
 
-可以通过 [config.json](/docs/reference/models/) 配置可选的对话模型，通过 [one-api](/docs/installation/one-api/) 来实现多模型接入。
+可以通过 [config.json](/docs/installation/reference/models/) 配置可选的对话模型，通过 [one-api](/docs/installation/one-api/) 来实现多模型接入。
 
 ### 温度 & 回复上限
 

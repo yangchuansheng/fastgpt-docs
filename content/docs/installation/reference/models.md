@@ -4,7 +4,7 @@ description: "如何接入除了 GPT 以外的其他大模型"
 icon: "model_training"
 draft: false
 toc: true
-weight: 220
+weight: 752
 ---
 
 默认情况下，FastGPT 只配置了 GPT 的 3 个模型，如果你需要接入其他模型，需要进行一些额外配置。

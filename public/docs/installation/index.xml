@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>部署指南 on FastGPT</title>
+    <title>私有化部署 on FastGPT</title>
     <link>/docs/installation/</link>
-    <description>Recent content in 部署指南 on FastGPT</description>
+    <description>Recent content in 私有化部署 on FastGPT</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language><atom:link href="/docs/installation/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -30,8 +30,7 @@
 具体部署方法可参考该项目的 README，也可以直接通过以下按钮一键部署：
 安装 Docker 和 docker-compose link Linux MacOS Windows # 安装 Docker curl -sSL https://get.daocloud.io/docker | sh systemctl enable --now docker # 安装 docker-compose curl -L https://github.com/docker/compose/releases/download/2.20.3/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose chmod +x /usr/local/bin/docker-compose # 验证安装 docker -v docker-compose -v 推荐直接使用 Orbstack。可直接通过 Homebrew 来安装：
 brew install orbstack 或者直接下载安装包进行安装。
-可以选择直接安装以 WSL2 作为引擎的 Docker Desktop。
-也可以直接在 WSL2 中安装命令行版本的 Docker。</description>
+我们建议将源代码和其他数据绑定到 Linux 容器中时，将其存储在 Linux 文件系统中，而不是 Windows 文件系统中。</description>
     </item>
     
     <item>

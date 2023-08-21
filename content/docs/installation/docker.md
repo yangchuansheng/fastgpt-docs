@@ -4,7 +4,7 @@ description: "使用 Docker Compose 快速部署 FastGPT"
 icon: ""
 draft: false
 toc: true
-weight: 120
+weight: 720
 ---
 
 ## 准备条件
@@ -46,14 +46,17 @@ docker-compose -v
 ```bash
 brew install orbstack
 ```
+
 或者直接[下载安装包](https://orbstack.dev/download)进行安装。
 {{< /markdownify >}}
  {{< /tab >}}
 {{< tab tabName="Windows" >}}
 {{< markdownify >}}
-可以选择直接[安装以 WSL2 作为引擎的 Docker Desktop](https://docs.docker.com/desktop/wsl/)。
+我们建议将源代码和其他数据绑定到 Linux 容器中时，将其存储在 Linux 文件系统中，而不是 Windows 文件系统中。
 
-也可以直接[在 WSL2 中安装命令行版本的 Docker](https://nickjanetakis.com/blog/install-docker-in-wsl-2-without-docker-desktop)。
+可以选择直接[使用 WSL 2 后端在 Windows 中安装 Docker Desktop](https://docs.docker.com/desktop/wsl/)。
+
+也可以直接[在 WSL 2 中安装命令行版本的 Docker](https://nickjanetakis.com/blog/install-docker-in-wsl-2-without-docker-desktop)。
 {{< /markdownify >}}
 {{< /tab >}}
 {{< /tabs >}}
@@ -252,4 +255,4 @@ fastgpt:
     - ./config.json:/app/data/config.json
 ```
 
-> 参考[配置详解](/docs/reference/configuration/)
+> 参考[配置详解](/docs/installation/reference/configuration/)

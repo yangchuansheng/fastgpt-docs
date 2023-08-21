@@ -1,10 +1,10 @@
 ---
-title: " 接入 ChatGLM2-6B"
+title: "接入 ChatGLM2-6B"
 description: " 将 FastGPT 接入私有化模型 ChatGLM2-6B"
 icon: "model_training"
 draft: false
 toc: true
-weight: 630
+weight: 753
 ---
 
 ## 前言

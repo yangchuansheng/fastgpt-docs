@@ -4,7 +4,7 @@ description: "通过接入 one-api 来实现对各种大模型的支持"
 icon: "Api"
 draft: false
 toc: true
-weight: 130
+weight: 730
 ---
 
 [one-api](https://github.com/songquanpeng/one-api) 是一个 OpenAI 接口管理 & 分发系统，可以通过标准的 OpenAI API 格式访问所有的大模型，开箱即用。
